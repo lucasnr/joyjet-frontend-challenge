@@ -1,0 +1,110 @@
+@import './colors';
+
+.header {
+  color: #fff;
+  position: relative;
+
+  &::before {
+    background-image: url(../img/capsule.jpg);
+    background-size: cover;
+    background-position: center;
+    content: ' ';
+    filter: brightness(0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    width: 100%;
+    z-index: -1;
+  }
+
+  .header__container {
+    margin: auto;
+    max-width: 1100px;
+    padding: 2.25rem 1rem;
+  }
+
+  .header__navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .header__nav {
+      display: flex;
+
+      .header__nav__link {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .header__title {
+    font-size: 7rem;
+    letter-spacing: 4px;
+    margin: 0px;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+
+    &::after {
+      background-color: $primary-color;
+      border-radius: 50%;
+      content: ' ';
+      display: inline-block;
+      height: 1.5rem;
+      margin-left: 0.5rem;
+      width: 1.5rem;
+    }
+  }
+
+  .header__subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0px;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  .header__button {
+    background-color: $primary-color;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.75rem 2rem;
+  }
+
+  .header__footer {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    padding: 1.5rem 1rem;
+
+    .header__footer__container {
+      align-items: center;
+      display: flex;
+      margin: auto;
+      max-width: 992px;
+    }
+
+    span {
+      line-height: 1.75;
+      padding: 0px 1.5rem;
+
+      &.header__footer__trending {
+        font-size: 1.25rem;
+        font-weight: bold;
+
+        span {
+          display: block;
+          color: $primary-color;
+        }
+      }
+
+      & + span {
+        font-size: 1rem;
+        border-left: 1px solid #fff;
+      }
+    }
+  }
+}
