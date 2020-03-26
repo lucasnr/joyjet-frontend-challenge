@@ -29,4 +29,15 @@ button {
   cursor: pointer;
 }
 
-@import './normalize', './header';
+.main {
+  background-color: #f8f8f8;
+  padding: 6rem 0px;
+
+  .container {
+    margin: auto;
+    max-width: 1100px;
+    padding: 0px 1rem;
+  }
+}
+
+@import './normalize', './header', './carousel', './card';

@@ -1,0 +1,29 @@
+@import './colors';
+
+.carousel {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+
+  &::before,
+  &::after {
+    align-self: center;
+    color: $primary-color;
+    cursor: pointer;
+    font-size: 5rem;
+  }
+
+  &::before {
+    content: '‹';
+    margin-right: 1rem;
+  }
+
+  &::after {
+    content: '›';
+    margin-left: 1rem;
+  }
+
+  .carousel__item + .carousel__item {
+    margin-left: 1rem;
+  }
+}
