@@ -7,8 +7,8 @@
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     />
   </head>
   <body>
@@ -33,6 +33,20 @@
               <a href="#" class="header__nav__link">About</a>
             </li>
           </ul>
+          <button id="nav-toggler" onclick="toggleNav()">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
+              />
+            </svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+              />
+            </svg>
+          </button>
         </nav>
 
         <h1 class="header__title">Space</h1>
@@ -66,54 +80,64 @@
     <main class="main">
       <div class="container">
         <section class="carousel">
-          <article class="carousel__item">
-            <figure class="card">
-              <img
-                class="card__image"
-                src="./assets/img/station.jpg"
-                alt="International Space Station"
-              />
-              <figcaption class="card__description">
-                <h3 class="card__title">International Space Station</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur luctus aliquet sapien….
-                </p>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="carousel__item">
-            <figure class="card">
-              <img
-                class="card__image"
-                src="./assets/img/capsule.jpg"
-                alt="My capsule"
-              />
-              <figcaption class="card__description">
-                <h3 class="card__title">My capsule</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur luctus aliquet sapien….
-                </p>
-              </figcaption>
-            </figure>
-          </article>
-          <article class="carousel__item">
-            <figure class="card">
-              <img
-                class="card__image"
-                src="./assets/img/moon.jpg"
-                alt="My moon"
-              />
-              <figcaption class="card__description">
-                <h3 class="card__title">My moon</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Curabitur luctus aliquet sapien….
-                </p>
-              </figcaption>
-            </figure>
-          </article>
+          <div class="carousel__content">
+            <article class="carousel__item">
+              <figure class="card">
+                <img
+                  class="card__image"
+                  src="./assets/img/station.jpg"
+                  alt="International Space Station"
+                />
+                <figcaption class="card__description">
+                  <h3 class="card__title">International Space Station</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur luctus aliquet sapien….
+                  </p>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="carousel__item">
+              <figure class="card">
+                <img
+                  class="card__image"
+                  src="./assets/img/capsule.jpg"
+                  alt="My capsule"
+                />
+                <figcaption class="card__description">
+                  <h3 class="card__title">My capsule</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur luctus aliquet sapien….
+                  </p>
+                </figcaption>
+              </figure>
+            </article>
+            <article class="carousel__item">
+              <figure class="card">
+                <img
+                  class="card__image"
+                  src="./assets/img/moon.jpg"
+                  alt="My moon"
+                />
+                <figcaption class="card__description">
+                  <h3 class="card__title">My moon</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur luctus aliquet sapien….
+                  </p>
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+          <div class="carousel__buttons">
+            <button class="carousel__button"></button>
+            <button class="carousel__button"></button>
+            <button class="carousel__button"></button>
+            <button class="carousel__button"></button>
+            <button class="carousel__button"></button>
+            <button class="carousel__button"></button>
+          </div>
         </section>
         <section class="about">
           <img
@@ -144,7 +168,7 @@
           </div>
         </section>
         <footer class="footer">
-          © 2016 Created by Joyjet Digital Space Agency
+          © 2016 Created by Joyjet <br />Digital Space Agency
         </footer>
       </div>
     </main>

@@ -1,31 +1,78 @@
 @import './colors';
 
 .carousel {
-  align-items: flex-start;
-  display: flex;
-  justify-content: space-between;
+  .carousel__content {
+    align-items: flex-start;
+    justify-content: space-between;
 
-  &::before,
-  &::after {
-    align-self: center;
-    color: $primary-color;
-    cursor: pointer;
-    font-size: 5rem;
+    @media (min-width: 576px) {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    @media (min-width: 1200px) {
+      &::before,
+      &::after {
+        align-self: center;
+        color: $primary-color;
+        cursor: pointer;
+        font-size: 5rem;
+      }
+
+      &::before {
+        content: '‹';
+        margin-left: calc(-1rem - 23px);
+        margin-right: 1rem;
+      }
+
+      &::after {
+        content: '›';
+        margin-left: 1rem;
+        margin-right: calc(-1rem - 23px);
+      }
+    }
   }
 
-  &::before {
-    content: '‹';
-    margin-left: calc(-1rem - 23px);
-    margin-right: 1rem;
+  .carousel__item {
+    & + .carousel__item {
+      display: none;
+
+      @media (min-width: 576px) {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: 1rem;
+      }
+    }
   }
 
-  &::after {
-    content: '›';
-    margin-left: 1rem;
-    margin-right: calc(-1rem - 23px);
-  }
+  .carousel__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 
-  .carousel__item + .carousel__item {
-    margin-left: 1rem;
+    @media (min-width: 1200px) {
+      display: none;
+    }
+
+    .carousel__button {
+      background-color: #9b9b9b;
+      border: none;
+      border-radius: 50%;
+      height: 1rem;
+      margin-left: 0.75rem;
+      width: 1rem;
+
+      &:first-child {
+        margin-left: 0;
+        background-color: $primary-color;
+      }
+    }
   }
 }
