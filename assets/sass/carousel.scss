@@ -15,12 +15,14 @@
 
   &::before {
     content: '‹';
+    margin-left: calc(-1rem - 23px);
     margin-right: 1rem;
   }
 
   &::after {
     content: '›';
     margin-left: 1rem;
+    margin-right: calc(-1rem - 23px);
   }
 
   .carousel__item + .carousel__item {
