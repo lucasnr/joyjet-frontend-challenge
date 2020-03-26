@@ -1,0 +1,29 @@
+@import './colors';
+
+.about {
+  display: flex;
+
+  .about__image {
+    border-radius: 10px;
+    margin-right: 2rem;
+    max-width: 320px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about__title {
+    color: $primary-color;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin: 0px;
+    text-transform: uppercase;
+  }
+
+  .about__text {
+    color: #333;
+    font-size: 0.875rem;
+    line-height: 2;
+    margin: 0px;
+    margin-top: 1rem;
+  }
+}
