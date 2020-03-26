@@ -2,7 +2,6 @@
 
 .header {
   color: #fff;
-  position: relative;
 
   &::before {
     background-image: url(../img/capsule.jpg);
@@ -29,6 +28,20 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+
+    &.fixed {
+      background-color: $primary-color;
+      left: 0;
+      padding: 0.5rem 5rem;
+      position: fixed;
+      top: 0;
+      transition: ease 0.2s background-color;
+    }
+
+    .header__logo {
+      display: flex;
+    }
 
     .header__nav {
       display: flex;
