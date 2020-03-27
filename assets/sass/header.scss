@@ -203,6 +203,7 @@
         .header__nav {
           display: grid !important;
           gap: 1.5rem;
+          grid-gap: 1.5rem;
           grid-row: 2;
           grid-column: 1 / 3;
 
