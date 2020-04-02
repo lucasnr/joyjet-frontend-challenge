@@ -2,6 +2,7 @@
   "name": "joyjet-frontend-challenge",
   "version": "1.0.0",
   "scripts": {
+    "build": "gulp default",
     "gulp": "gulp"
   },
   "repository": "https://github.com/lucasnr/joyjet-frontend-challenge.git",
