@@ -5,7 +5,7 @@ const { src, dest, series, parallel } = require('gulp'),
   minify = require('gulp-minify');
 
 function cleanDist() {
-  return src('dist/', { read: false }).pipe(clean());
+  return src('dist/', { read: false, allowEmpty: true }).pipe(clean());
 }
 
 function copyDist() {
