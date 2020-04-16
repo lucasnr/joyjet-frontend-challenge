@@ -3,9 +3,13 @@
   border-radius: 10px;
   box-shadow: 0px 0px 4px #ededed;
   display: grid;
-  margin: auto;
-  max-width: 340px;
+  margin: 0px;
+  max-width: 21.25rem;
   overflow: hidden;
+
+  @media (min-width: 576px) {
+    max-width: none;
+  }
 
   .card__image {
     object-fit: cover;

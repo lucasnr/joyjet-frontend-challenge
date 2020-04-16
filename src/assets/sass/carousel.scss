@@ -3,17 +3,28 @@
 .carousel {
   .carousel__content {
     align-items: flex-start;
-    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
     @media (min-width: 576px) {
-      display: grid;
-      gap: 1.5rem;
-      grid-gap: 1.5rem;
-      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
     }
 
-    @media (min-width: 768px) {
-      display: flex;
+    @media (min-width: 576px) and (max-width: 992px) {
+      & > * {
+        width: calc(50% - 0.75rem);
+
+        &:nth-child(3n) {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    @media (min-width: 992px) {
+      & > * {
+        width: calc(33.33% - 0.5rem);
+      }
     }
 
     @media (min-width: 1200px) {
@@ -27,29 +38,23 @@
 
       &::before {
         content: '‹';
-        margin-left: calc(-1rem - 23px);
+        margin-left: -3rem;
         margin-right: 1rem;
       }
 
       &::after {
         content: '›';
         margin-left: 1rem;
-        margin-right: calc(-1rem - 23px);
+        margin-right: -3rem;
       }
     }
   }
 
-  .carousel__item {
-    & + .carousel__item {
-      display: none;
+  .carousel__item + .carousel__item {
+    display: none;
 
-      @media (min-width: 576px) {
-        display: block;
-      }
-
-      @media (min-width: 768px) {
-        margin-left: 1rem;
-      }
+    @media (min-width: 576px) {
+      display: block;
     }
   }
 

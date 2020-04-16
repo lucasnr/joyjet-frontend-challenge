@@ -5,17 +5,24 @@
     display: flex;
   }
 
+  & > * {
+    flex: 1;
+  }
+
   .about__image {
-    border-radius: 10px;
+    background-image: url(../img/capsule.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.625rem;
+    height: 21rem;
     margin-bottom: 2rem;
-    object-fit: cover;
-    object-position: center;
     width: 100%;
 
     @media (min-width: 576px) {
+      height: auto;
       margin-bottom: 0;
       margin-right: 2rem;
-      max-width: 320px;
+      max-width: 20rem;
     }
   }
 
