@@ -9,7 +9,7 @@ function cleanDist() {
 }
 
 function copyDist() {
-  return src('src/**/*').pipe(dest('dist/'));
+  return src(['src/**/*', '!src/assets/sass/**']).pipe(dest('dist/'));
 }
 
 function minifyHtml() {
@@ -23,18 +23,16 @@ function minifyJs() {
     .pipe(
       minify({
         ext: {
-          min: '.js'
+          min: '.js',
         },
-        noSource: true
+        noSource: true,
       })
     )
     .pipe(dest('dist/'));
 }
 
 function inlineJs() {
-  return src('src/**/*.html')
-    .pipe(inlinesource())
-    .pipe(dest('dist/'));
+  return src('src/**/*.html').pipe(inlinesource()).pipe(dest('dist/'));
 }
 
 exports.default = series(
